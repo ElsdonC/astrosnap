@@ -5,84 +5,221 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   font-family: "Orbitron", sans-serif;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  background: linear-gradient(
+    to top right,
+    #2E6E82 0%, 
+    #000829 50%
+  );
+}
+/* HERO Section */
+.hero-container {
+  height: 100vh;
+  width: auto;
+  position: relative;
+}
+.hero-container nav {
+  padding: 10px 0;
+  height: 30px;
+  width: 90vw;
+  margin: auto;
+}
+.hero-container nav ul .brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.hero-container nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.hero-container nav ul li {
+  color: white;
+  list-style: none;
+}
+.hero-container nav ul li a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.description {
+  margin: 40vh auto 0;
+  width: 90vw;
+  height: 30vh;
+}
+.description h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: hsl(182, 90%, 89%);
+}
+.description .emphasize {
+  font-size: 10rem;
+  margin: 0;
+  line-height: 8rem;
+  color: white;
+}
+.description p {
+  font-size: 1.25rem;
+  color: hsl(182, 90%, 89%);
+}
+.cta-btn {
+  font-size: 2rem;
+  padding: 20px 40px;
+  border: 1px solid white;
+  text-decoration: none;
+  line-height: 4rem;
+  border-radius: 10px;
+}
+.cta-btn:hover, .nav-cta:hover {
+  background-color:rgb(98, 235, 253);
+}
+/* Generate Section */
+.generate-container {
+  position: relative;
+  height: 100vh;
+  padding-top: 5vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 80vw;
-  border-radius: 50px;
+.cta {
+  font-size: 3rem;
 }
-
-h1, p, form, h2 {
-  text-align: center;
+/* form */
+#date, #submit-btn {
+  color: black;
+  padding: 10px;
 }
-
-p {
-  font-weight: 500;
+#date:focus {
+  color: black;
 }
-
-form {
-  text-align: center;
+#submit-btn {
+  padding: 12px;
+  color: black;
+  background-color: rgb(98, 235, 253);
+  border: none;
+  border-radius: 0 10px 10px 0;
 }
-
-#reset {
+#info-icon {
+  position: absolute;
+  right: -40px;
+  top: 15px;
+}
+#info-icon:hover {
+  cursor: pointer;
+}
+#explanation {
+  margin: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 100;
+  color: black;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
   display: none;
-  position: relative;
-  padding: 2rem 1rem;
-  background-color: red;
-  border: 1px solid black;
-  border-radius: 50%;
 }
-
-#reset:hover,
+img {
+  max-height: 100%;
+}
+#generated-img-container {
+  position: relative;
+  height: 50vh;
+  width: fit-content;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 form button:hover {
   cursor: pointer;
   background-color: rgb(98, 235, 253);
 }
+.text-blue {
+  color: rgb(98, 235, 253);
+}
 
 @media (min-width: 800px) {
-  body {
-    background-image: url(../img/bg.avif);
-    background-size: 100vw;
+  .hero-container {
+    background: linear-gradient(
+      rgba(1, 39, 51, 0.1), 
+      rgba(1, 106, 148, 0.1)
+    ),
+    url(../img/hero-img.jpg);
     background-repeat: no-repeat;
-  }
-  img {
-    max-height: 65vh;
-  }
-  #reset {
-    top: 2vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
   }
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    background-image: url(../img/mobileBG.avif);
-    background-size: 100vh;
+  .hero-container {
+    background: linear-gradient(
+      rgba(1, 39, 51, 0.1), 
+      rgba(1, 106, 148, 0.1)
+    ),
+    url(../img/hero-img.jpg);
     background-repeat: no-repeat;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
   }
-  h1, h2 {
-    font-size: 1rem;
+  .hero-container nav {
+    width: 80vw;
   }
-  p {
-    font-size: 0.7rem;
+  .nav-cta {
+    display: none;
   }
-  form {
-    font-size: 0.65rem;
+  .description {
+    margin: 20vh auto 0;
+    width: 90vw;
+    height: 30vh;
+    text-align: center;
+  }
+  .description h2 {
+    font-size: 1.5rem;
+  }
+  .description .emphasize {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .description p {
+    font-size: 0.75rem;
+    margin: 5px 0 20px;
+  }
+  .cta-btn {
+    font-size: 1.5rem;
   }
   img {
-    max-height: 75vh;
+    max-width: 95vw;
+    height: auto;
   }
-  #reset {
-    top: 10vh;
+  .cta {
+    font-size: 2.5rem;
+  }
+  #info-icon {
+    display: none;
   }
 }

@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="description"
+            content="This is where your description goes" />
+        <meta name="keywords" content="one, two, three" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-		<title>EarthScope Explorer</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
+        <title>AstroSnap</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <section class="hero-container">
+            <nav>
+                <ul>
+                    <li class="brand">AstroSnap</li>
+                    <li>
+                        <a href="#generate-img" class="nav-cta"
+                            >Start Generating</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="description">
+                <h2>DISCOVER, CAPTURE,</h2>
+                <h2 class="emphasize">EXPLORE</h2>
+                <p>Generate Astronomy Images from NASA.</p>
+                <a href="#generate-img" class="cta-btn">Start Generating</a>
+            </div>
+        </section>
+        <section id="generate-img" class="generate-container">
+            <h1 class="cta">Give it a <span class="text-blue">shot.</span></h1>
+            <form>
+                <input id="date" type="date" required /><button
+                    id="submit-btn"
+                    type="submit"
+                    name="button">
+                    Generate Image
+                </button>
+            </form>
+            <h2 id="title"></h2>
+            <section id="generated-img-container">
+                <img class="generated-img" src="" alt="" />
+				<i id="info-icon" class="fa-solid fa-circle-info fa-2xl"></i>
+                <p id="explanation"></p>
+            </section>
+        </section>
 
-		<h1>Welcome to EarthScope Explorer!</h1>
-		<p>Type in an address and get a satellite image from Nasa</p>
-		<form action="">
-			<label for="location">Enter an Address: </label>
-			<input id="location" type="text" required>
-			<button type="submit" name="button">Get photo</button>
-		</form>
-		
-
-		<h2></h2>
-		<img src="" alt="">
-		<button id="reset">Reset</button>
-
-		<script type='text/javascript' src='js/config.js'></script>
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
 </html>
