@@ -1,7 +1,7 @@
 # AstroSnap
 This web application is an image generator that fetches images from NASA's API.
 
-[[https://elsdonc-astrosnap.netlify.app/]](https://elsdonc-astrosnap.netlify.app/)
+[https://elsdonc-astrosnap.netlify.app/](https://elsdonc-astrosnap.netlify.app/)
 
 ## How It's Made
 
