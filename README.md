@@ -3,6 +3,10 @@ This web application is an image generator that fetches images from NASA's API.
 
 [https://elsdonc-astrosnap.netlify.app/](https://elsdonc-astrosnap.netlify.app/)
 
+## Preview
+
+<img width="1248" alt="image" src="https://github.com/ElsdonC/astrosnap/assets/67447710/a67d8a1e-9d0c-41ea-af82-a6a3fbde79c4">
+
 ## How It's Made
 
 **Tech used:** HTML, CSS, JavaScript
